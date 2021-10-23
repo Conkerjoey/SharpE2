@@ -24,3 +24,21 @@ string output = simplifier.Simplify("5 + 6 * 3 + 5 ^ 5");
 
 /* output will be 3148 as a string */
 ```
+
+# Supported Syntax
+### Operators
+The current supported operators are:
+- addition (+)
+- subtraction (-)
+- multiplication (*)
+- division (/)
+- exponent (^)
+- modulo (%)
+### Variables
+Variables name are supported. The current standard is any letters and the '_' character.
+
+For example:
+- x
+- _abc
+- x_x
+- ABC
