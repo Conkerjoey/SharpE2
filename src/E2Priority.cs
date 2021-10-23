@@ -7,7 +7,7 @@
 * Description : This is a simple class defining a node priority (aka parenthesis)
 */
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public class E2Priority : E2Element
     {

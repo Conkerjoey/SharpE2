@@ -7,7 +7,7 @@
 * Description : Class defining a unary operation in an expression.
 */
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public class E2Unary : E2Element
     {

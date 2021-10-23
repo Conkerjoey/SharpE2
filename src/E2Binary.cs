@@ -10,7 +10,7 @@
 
 using System;
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public class E2Binary : E2Element
     {

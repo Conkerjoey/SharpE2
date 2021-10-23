@@ -10,7 +10,7 @@
 
 using System;
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public class E2Number : E2Element
     {

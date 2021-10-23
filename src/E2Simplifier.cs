@@ -11,7 +11,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public class E2Simplifier
     {

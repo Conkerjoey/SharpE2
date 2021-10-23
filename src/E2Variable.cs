@@ -7,7 +7,7 @@
 * Description : Class defining a variable in an expression.
 */
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public class E2Variable : E2Element
     {

@@ -7,7 +7,7 @@
 * Description : Abstract class of the main node type.
 */
 
-namespace ExpressionEngine
+namespace SharpE2
 {
     public enum Operator
     {
