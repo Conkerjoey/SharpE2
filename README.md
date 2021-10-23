@@ -4,6 +4,7 @@ This is a C# expression engine. The engine can convert string based simple mathe
 This class library works as follow:
 
 "1 + 2 + 3" -> "6"
+
 "2 * 10 % 3" -> "2"
 
 # Installation
