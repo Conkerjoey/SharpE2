@@ -56,6 +56,8 @@ namespace SharpE2
             this.expression = originalExpression;
             this.charIndex = 0;
             E2Element expressionElement = ParseSummand();
+            if (expression[charIndex] != ';')
+                throw new Exception("Unexpected character: " + expression[charIndex] + " at position " + (charIndex + 1));
             expressionElement = expressionElement.Evaluate();
             if (expressionElement is E2Number)
             {
