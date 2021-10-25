@@ -77,9 +77,9 @@ namespace SharpE2
             if (expression[charIndex] == '-')
             {
                 IncrementIndex();
-                return new E2Unary(ParseAtom(), UnaryOperator.MINUS);
+                return new E2Unary(ParseParenthesis(), UnaryOperator.MINUS);
             }
-            else if (Char.IsDigit(expression[charIndex]) && (expression[charIndex + 1] == 'x' || expression[charIndex + 1] == 'X'))
+            else if (expression[charIndex] == '0' && (expression[charIndex + 1] == 'x' || expression[charIndex + 1] == 'X'))
             {
                 string value = "";
                 while (Char.IsLetterOrDigit(expression[charIndex]))
@@ -89,6 +89,18 @@ namespace SharpE2
                 }
                 NextToken();
                 return new E2Number(Convert.ToInt64(value.Substring(2, value.Length - 2), 16), E2Number.Format.HEXADECIMAL);
+            }
+            else if (expression[charIndex] == '0' && (expression[charIndex + 1] == 'b' || expression[charIndex + 1] == 'B'))
+            {
+                string value = "";
+                charIndex += 2;
+                while (expression[charIndex] == '0' || expression[charIndex] == '1')
+                {
+                    value += expression[charIndex];
+                    charIndex++;
+                }
+                NextToken();
+                return new E2Number(Convert.ToInt64(value, 2), E2Number.Format.BINARY);
             }
             else if (Char.IsDigit(expression[charIndex]))
             {
