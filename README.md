@@ -26,6 +26,11 @@ string output = simplifier.Simplify("5 + 6 * 3 + 5 ^ 5");
 ```
 
 # Supported Syntax
+### Values
+- Decimal
+- Octal
+- Hexadecimal
+- Binary
 ### Operators
 The current supported operators are:
 - addition (+)
